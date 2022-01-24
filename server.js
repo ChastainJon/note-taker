@@ -32,10 +32,8 @@ app.post('/api/notes', (req, res) => {
         path.join(__dirname, './db/db.json'),
         db
     )
-    
-    
-    
-})  
+    res.redirect('back');
+})
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'))
 })
